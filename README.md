@@ -2,6 +2,5 @@
 
 A website that allows you to search for images using filtering witch Pixaby API.
 
-
 https://samcia.github.io//goit-react-hw-03-image-finder
 
