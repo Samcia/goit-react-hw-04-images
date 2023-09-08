@@ -1,4 +1,7 @@
-# GoIT React Homework 3 Image Finder
+#React Image Finder
 
-Third homework part II, website that allows you to search for images using filtering.
+A website that allows you to search for images using filtering witch Pixaby API.
+
+
+https://samcia.github.io//goit-react-hw-03-image-finder
 
