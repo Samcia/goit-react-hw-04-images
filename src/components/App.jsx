@@ -48,7 +48,7 @@ export class App extends Component {
   }
 
   fetchData = async () => {
-    const { searchQuery, currentPage, totalPages } = this.state;
+    const { searchQuery, currentPage } = this.state;
 
     try {
       this.setState({ isLoading: true });
