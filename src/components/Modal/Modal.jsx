@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 export const Modal = ({ largeImageURL, closeModal }) => {
   useEffect(() => {
@@ -23,4 +24,9 @@ export const Modal = ({ largeImageURL, closeModal }) => {
       </div>
     </>
   );
+};
+
+Modal.propTypes = {
+  largeImageURL: PropTypes.string.isRequired,
+  closeModal: PropTypes.func.isRequired,
 };

@@ -1,5 +1,6 @@
 import { Modal } from '../Modal';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const ImageGalleryItem = ({ id, webformatURL, largeImageURL, alt }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,4 +23,9 @@ export const ImageGalleryItem = ({ id, webformatURL, largeImageURL, alt }) => {
       )}
     </>
   );
+};
+
+ImageGalleryItem.propTypes = {
+  id: PropTypes.number.isRequired,
+  webformatURL: PropTypes.string.isRequired,
 };

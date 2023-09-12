@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const SearchBar = ({ getQuery }) => {
   return (
     <header className="Searchbar">
@@ -15,4 +17,8 @@ export const SearchBar = ({ getQuery }) => {
       </form>
     </header>
   );
+};
+
+SearchBar.propTypes = {
+  getQuery: PropTypes.func.isRequired,
 };
