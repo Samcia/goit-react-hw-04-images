@@ -2,7 +2,7 @@ import { Modal } from '../Modal';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-export const ImageGalleryItem = ({ id, webformatURL, largeImageURL, alt }) => {
+export const ImageGalleryItem = ({ webformatURL, largeImageURL, alt }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
@@ -15,9 +15,16 @@ export const ImageGalleryItem = ({ id, webformatURL, largeImageURL, alt }) => {
 
   return (
     <>
-      <li key={id} onClick={openModal} className="ImageGalleryItem">
-        <img src={webformatURL} className="ImageGalleryItem-image" alt={alt} />
-      </li>
+      {' '}
+      <ul>
+        <li onClick={openModal} className="ImageGalleryItem">
+          <img
+            src={webformatURL}
+            className="ImageGalleryItem-image"
+            alt={alt}
+          />
+        </li>{' '}
+      </ul>
       {isOpen && (
         <Modal largeImageURL={largeImageURL} closeModal={closeModal} />
       )}
@@ -26,6 +33,7 @@ export const ImageGalleryItem = ({ id, webformatURL, largeImageURL, alt }) => {
 };
 
 ImageGalleryItem.propTypes = {
-  id: PropTypes.number.isRequired,
   webformatURL: PropTypes.string.isRequired,
+  largeImageURL: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
 };

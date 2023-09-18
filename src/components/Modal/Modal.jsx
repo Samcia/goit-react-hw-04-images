@@ -1,32 +1,17 @@
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-export const Modal = ({ largeImageURL, closeModal }) => {
-  useEffect(() => {
-    const handleKeyPress = event => {
-      if (event.key === 'Escape') {
-        closeModal();
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyPress);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyPress);
-    };
-  }, [closeModal]);
-
+export const Modal = ({ largeImageURL, closeModal, alt }) => {
   return (
-    <>
-      <div className="Overlay" onClick={closeModal}></div>
+    <div onClick={closeModal} className="Overlay">
       <div className="Modal">
-        <img src={largeImageURL} alt="" />
+        <img src={largeImageURL} alt={alt} />
       </div>
-    </>
+    </div>
   );
 };
 
 Modal.propTypes = {
   largeImageURL: PropTypes.string.isRequired,
   closeModal: PropTypes.func.isRequired,
+  alt: PropTypes.string.isRequired,
 };
