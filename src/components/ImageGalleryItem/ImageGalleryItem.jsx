@@ -15,8 +15,13 @@ export const ImageGalleryItem = ({ webformatURL, largeImageURL, alt }) => {
 
   return (
     <>
-      <li onClick={openModal} className="ImageGalleryItem">
-        <img src={webformatURL} className="ImageGalleryItem-image" alt={alt} />
+      <li className="ImageGalleryItem">
+        <img
+          onClick={openModal}
+          src={webformatURL}
+          className="ImageGalleryItem-image"
+          alt={alt}
+        />
         {isOpen && (
           <Modal largeImageURL={largeImageURL} closeModal={closeModal} />
         )}
