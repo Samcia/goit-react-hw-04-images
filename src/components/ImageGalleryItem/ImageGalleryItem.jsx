@@ -22,7 +22,6 @@ export const ImageGalleryItem = ({ webformatURL, largeImageURL, alt }) => {
           className="ImageGalleryItem-image"
           alt={alt}
         />
-
         {isOpen && (
           <Modal largeImageURL={largeImageURL} closeModal={closeModal} />
         )}
