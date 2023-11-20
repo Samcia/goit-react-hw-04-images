@@ -1,6 +1,5 @@
 **#React Image Finder**
 
-A website that allows you to search for images using key word with Pixabay API.
+Refracting existing code with React Hooks
 
-https://samcia.github.io/goit-react-hw-03-image-finder/
-
+https://samcia.github.io/goit-react-hw-04-images-vol2/
