@@ -65,7 +65,6 @@ export const App = () => {
       setIsLoading(false);
     }
   };
-
   return (
     <div className="App">
       <SearchBar getQuery={getQuery} />
