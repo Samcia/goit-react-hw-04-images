@@ -3,7 +3,7 @@ import { SearchBar } from './SearchBar';
 import { Button } from './Button';
 import { ImageGallery } from './ImageGallery';
 import { Loader } from './Loader/Loader';
-import { fetchPhotos, LIMIT } from '../utlils/pixabayAPI/pixabayApi';
+import { fetchPhotos, LIMIT } from '../utlils/pixabayAPI/pixabayAPI';
 import { useState, useEffect } from 'react';
 
 export const App = () => {
